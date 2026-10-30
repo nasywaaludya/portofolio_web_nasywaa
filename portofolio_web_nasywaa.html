@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya - Aesthetic Pink Theme</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        pink: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Glassmorphism effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(253, 164, 175, 0.3);
+        }
+        .pink-gradient-text {
+            background: linear-gradient(135deg, #e11d48, #fb7185);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-white to-pink-100 text-gray-800 font-sans antialiased min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card shadow-sm border-b border-pink-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="font-bold text-xl text-pink-600 flex items-center gap-2">
+                    <i class="fa-solid fa-sparkles text-pink-400"></i>
+                    <span>Portfolio<span class="text-pink-400">.</span></span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="text-gray-600 hover:text-pink-600 font-medium transition duration-200">About Me</a>
+                    <a href="#skills" class="text-gray-600 hover:text-pink-600 font-medium transition duration-200">What I Can Do</a>
+                    <a href="#achievement" class="text-gray-600 hover:text-pink-600 font-medium transition duration-200">Achievement</a>
+                    <a href="#contact" class="text-gray-600 hover:text-pink-600 font-medium transition duration-200">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md hover:shadow-pink-300 transition duration-300 flex items-center gap-2">
+                        <i class="fa-regular fa-paper-plane"></i> Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-pink-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-pink-100 px-4 pt-2 pb-4 space-y-3">
+            <a href="#about" class="block text-gray-600 hover:text-pink-600 font-medium py-1">About Me</a>
+            <a href="#skills" class="block text-gray-600 hover:text-pink-600 font-medium py-1">What I Can Do</a>
+            <a href="#achievement" class="block text-gray-600 hover:text-pink-600 font-medium py-1">Achievement</a>
+            <a href="#contact" class="block text-gray-600 hover:text-pink-600 font-medium py-1">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO / HOME SECTION -->
+    <section class="pt-28 pb-16 md:pt-36 md:pb-24 px-4 max-w-6xl mx-auto">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <span class="inline-block bg-pink-100 text-pink-600 px-4 py-1.5 rounded-full text-sm font-medium mb-4 shadow-sm">
+                    ✨ Welcome to My Portfolio
+                </span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                    Halo, Saya <br><span class="pink-gradient-text">Nasywaa Ludya Aruna</span>
+                </h1>
+                <p class="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">
+                    Mahasiswa yang berorientasi pada hasil, kreatif, dan bersemangat dalam mengembangkan keahlian di bidang teknologi dan desain.
+                </p>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a href="#contact" class="bg-pink-500 hover:bg-pink-600 text-white font-medium px-6 py-3 rounded-full shadow-lg shadow-pink-200 transition duration-300">
+                        <i class="fa-solid fa-envelope mr-2"></i> Kontak Saya
+                    </a>
+                    <a href="#" onclick="alert('https://drive.google.com/file/d/1ClDihM-ZtRFXk2aCXmGDcb35SDtpWpDt/view?usp=drivesdk'); return false;" class="bg-white border-2 border-pink-300 text-pink-600 hover:bg-pink-50 font-medium px-6 py-3 rounded-full transition duration-300">
+                        <i class="fa-solid fa-download mr-2"></i> Download CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Picture Header -->
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div class="relative w-56 h-56 sm:w-72 sm:h-72">
+                    <div class="absolute inset-0 bg-pink-300 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                    <img src="c:\Users\devin\Downloads\Foto profil.jpeg" alt="Foto Profil" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. ABOUT ME SECTION -->
+    <section id="about" class="py-16 px-4 max-w-6xl mx-auto scroll-mt-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">About Me</h2>
+            <div class="w-16 h-1 bg-pink-400 mx-auto mt-2 rounded-full"></div>
+            <p class="text-gray-500 mt-2">Profil singkat, identitas, dan aktivitas saya</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Biodata Card -->
+            <div class="glass-card p-6 rounded-2xl shadow-sm border border-pink-200 md:col-span-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-pink-600 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-user-graduate"></i> Identitas Diri
+                    </h3>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="p-2.5 bg-pink-50/50 rounded-lg"><strong class="text-gray-800">Nama:</strong> Nasywaa Ludya Aruna</li>
+                        <li class="p-2.5 bg-pink-50/50 rounded-lg"><strong class="text-gray-800">NIM:</strong> 26051204141</li>
+                        <li class="p-2.5 bg-pink-50/50 rounded-lg"><strong class="text-gray-800">Prodi:</strong> Teknik Informatika</li>
+                        <li class="p-2.5 bg-pink-50/50 rounded-lg"><strong class="text-gray-800">Pendidikan:</strong> Universitas Negeri Surabaya</li>
+                    </ul>
+                </div>
+                 <div class="mt-6 pt-4 border-t border-pink-100">
+                    <span class="text-xs font-semibold text-pink-500 uppercase tracking-wider block mb-1">Aktivitas Saat Ini</span>
+                    <p class="text-sm text-gray-600">Aktif kuliah, sedang mendaftar organisasi kemahasiswaan.</p>
+                </div>
+            </div>
+
+            <!-- Deskripsi Detail & Statistik -->
+            <div class="md:col-span-2 flex flex-col justify-between gap-6">
+                <div class="glass-card p-6 rounded-2xl shadow-sm border border-pink-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Deskripsi Singkat</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Mahasiswa S1 Teknik Informatika Universitas Negeri Surabaya yang memiliki minat pada teknologi, dan pengembangan diri. Berpengalaman dalam kegiatan organisasi, khususnya dalam koordinasi tim, komunikasi, dan penyelesaian tugas secara terstruktur. Memiliki motivasi tinggi untuk mempelajari hal baru, mampu beradaptasi dengan perubahan, serta siap menghadapi tantangan di lingkungan kampus. 
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Fokus utama saya saat ini adalah mempelajari bahasa pemrograman dan mempunyai target nilai akademik yang bagus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. WHAT I CAN DO SECTION -->
+    <section id="skills" class="py-16 px-4 max-w-6xl mx-auto scroll-mt-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">What I Can Do</h2>
+            <div class="w-16 h-1 bg-pink-400 mx-auto mt-2 rounded-full"></div>
+            <p class="text-gray-500 mt-2">Kemampuan dan alat yang biasa saya gunakan</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- Service / Capability Card 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-pink-100">
+                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Teamwork</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Bekerja sama dengan anggota kelompok dalam menyelesaikan tugas, berdiskusi untuk menentukan keputusan, serta membantu tim agar pekerjaan dapat diselesaikan dengan baik.
+                </p>
+            </div>
+
+            <!-- Service / Capability Card 2 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-pink-100">
+                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Problem Solving</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Mampu menganalisis masalah, merancang solusi, dan mengimplementasikan ide kreatif untuk menyelesaikan tantangan yang dihadapi dalam proyek atau tugas.
+                </p>
+            </div>
+
+            <!-- Service / Capability Card 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-pink-100">
+                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Time Management</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Mampu mengelola waktu dengan efektif, menetapkan prioritas, dan memastikan penyelesaian tugas dalam tenggat waktu yang ditentukan.
+                </p>
+            </div>
+        </div>
+
+        <!-- Skills & Tools Badge Area -->
+        <div class="glass-card p-8 rounded-2xl border border-pink-200">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Skills & Tools yang Dikuasai</h3>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-white border border-pink-200 text-pink-700 px-4 py-2 rounded-xl text-sm font-medium shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-c"></i> C++
+                </span>
+                <span class="bg-white border border-pink-200 text-pink-700 px-4 py-2 rounded-xl text-sm font-medium shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-microsoft"></i> Ms. Word
+                </span>
+                <span class="bg-white border border-pink-200 text-pink-700 px-4 py-2 rounded-xl text-sm font-medium shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-microsoft"></i> Ms. Excel
+                </span>
+                <span class="bg-white border border-pink-200 text-pink-700 px-4 py-2 rounded-xl text-sm font-medium shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-newspaper"></i> Canva
+                </span>
+                <span class="bg-white border border-pink-200 text-pink-700 px-4 py-2 rounded-xl text-sm font-medium shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-git-alt text-red-500 text-lg"></i> Git & GitHub
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ACHIEVEMENT SECTION -->
+    <section id="achievement" class="py-16 px-4 max-w-6xl mx-auto scroll-mt-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">Achievements</h2>
+            <div class="w-16 h-1 bg-pink-400 mx-auto mt-2 rounded-full"></div>
+            <p class="text-gray-500 mt-2">Pencapaian dan sertifikasi yang pernah saya raih</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Achievement Card 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-pink-100 flex flex-col">
+                <img src="c:\Users\devin\Downloads\Sertifikasi Gemini.jpg" alt="Bukti Sertifikat" class="w-full h-48 object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1 rounded-full">2026</span>
+                            <span class="text-xs text-gray-500 font-medium">Google Gemini</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sertifikasi Google Gemini</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Berhasil meraih sertifikasi Google Gemini dengan kompetensi dasar, pengetahuan dan keterampilan dalam menggunakan AI Google Gemini di lingkungan pendidikan.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" onclick="alert('Buka tautan sertifikat / bukti di sini'); return false;" class="inline-flex items-center gap-1 text-sm text-pink-600 font-semibold hover:text-pink-700">
+                            Lihat Bukti Sertifikat <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Card 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-pink-100 flex flex-col">
+                <img src="c:\Users\devin\Downloads\Peserta OSN BIOLOGI.jpeg" class="w-full h-48 object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1 rounded-full">2025</span>
+                            <span class="text-xs text-gray-500 font-medium">PUSPERNAS KEMENDIKBUD RI</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Peserta Olimpiade Sains Nasional - Biologi</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Berhasil menjadi peserta dalam olimpiade sains nasional bidang biologi.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" onclick="alert('Buka tautan sertifikat / bukti di sini'); return false;" class="inline-flex items-center gap-1 text-sm text-pink-600 font-semibold hover:text-pink-700">
+                            Lihat Bukti Sertifikat <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Card 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-pink-100 flex flex-col">
+                <img src="c:\Users\devin\Downloads\Peserta OSN GEOGRAFI.jpeg" class="w-full h-48 object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1 rounded-full">2024</span>
+                            <span class="text-xs text-gray-500 font-medium">PUSPERNAS KEMENDIKBUD RI</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Peserta Olimpiade Sains Nasional - Geografi</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Berhasil menjadi peserta dalam olimpiade sains nasional bidang geografi.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" onclick="alert('Buka tautan sertifikat / bukti di sini'); return false;" class="inline-flex items-center gap-1 text-sm text-pink-600 font-semibold hover:text-pink-700">
+                            Lihat Bukti Sertifikat <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONTACT SECTION -->
+    <section id="contact" class="py-16 px-4 max-w-6xl mx-auto scroll-mt-16 mb-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">Get In Touch</h2>
+            <div class="w-16 h-1 bg-pink-400 mx-auto mt-2 rounded-full"></div>
+            <p class="text-gray-500 mt-2">Tertarik berkolaborasi? Jangan ragu untuk menghubungi saya!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Contact Info Sidebar -->
+            <div class="glass-card p-6 rounded-2xl border border-pink-200 md:col-span-1 space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Informasi Kontak</h3>
+                    <p class="text-sm text-gray-600 mb-6">Silakan hubungi saya melalui salah satu media berikut:</p>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="mailto:emailanda@gmail.com" class="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm border border-pink-100 hover:border-pink-300 transition group">
+                        <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center group-hover:bg-pink-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="block text-xs text-gray-400">Email</span>
+                            <span class="text-sm font-semibold text-gray-700 truncate block">nasywaaludya49@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com" target="_blank" class="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm border border-pink-100 hover:border-pink-300 transition group">
+                        <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center group-hover:bg-pink-500 group-hover:text-white transition">
+                            <i class="fa-brands fa-github text-lg"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="block text-xs text-gray-400">GitHub</span>
+                            <span class="text-sm font-semibold text-gray-700 truncate block">github.com/username</span>
+                        </div>
+                    </a>
+
+                    <a href="https://linkedin.com" target="_blank" class="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm border border-pink-100 hover:border-pink-300 transition group">
+                        <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center group-hover:bg-pink-500 group-hover:text-white transition">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="block text-xs text-gray-400">LinkedIn</span>
+                            <span class="text-sm font-semibold text-gray-700 truncate block">https://www.linkedin.com/in/nasywaa-ludya-4451aa441?utm_source=share_via&utm_content=profile&utm_medium=member_android</span>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="alert('https://drive.google.com/file/d/1ClDihM-ZtRFXk2aCXmGDcb35SDtpWpDt/view?usp=drivesdk'); return false;" class="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm border border-pink-100 hover:border-pink-300 transition group">
+                        <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center group-hover:bg-pink-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-file-pdf text-lg"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="block text-xs text-gray-400">Curriculum Vitae</span>
+                            <span class="text-sm font-semibold text-gray-700 truncate block">Download CV / Resume</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Form Kontak Interaktif -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-pink-200 md:col-span-2">
+                <h3 class="text-xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+                <form id="contactForm" onsubmit="return handleFormSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Nama Lengkap</label>
+                            <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-2.5 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white/80">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Alamat Email</label>
+                            <input type="email" required placeholder="nama@email.com" class="w-full px-4 py-2.5 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white/80">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Subjek Pesan</label>
+                        <input type="text" required placeholder="Tujuan pesan / diskusi project" class="w-full px-4 py-2.5 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white/80">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">Pesan Anda</label>
+                        <textarea rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full px-4 py-2.5 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white/80"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 rounded-xl shadow-md transition duration-300 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Kirim Pesan Sekarang
+                    </button>
+                </form>
+                <!-- Notification message container -->
+                <div id="formNotification" class="hidden mt-4 p-3 bg-pink-100 border border-pink-300 text-pink-700 rounded-xl text-center text-sm"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white/80 border-t border-pink-100 py-6 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Nasywaa Ludya Aruna. All rights reserved. Made with <i class="fa-solid fa-heart text-pink-500"></i></p>
+    </footer>
+
+    <!-- JAVASCRIPT UNTUK INTERAKSI SEDERHANA -->
+    <script>
+        // Toggle menu mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const notification = document.getElementById('formNotification');
+            
+            // Tampilkan notifikasi sederhana
+            notification.textContent = 'Pesan Anda telah berhasil terkirim! Terima kasih telah menghubungi.';
+            notification.classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+
+            // Sembunyikan notifikasi setelah 4 detik
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 4000);
+
+            return false;
+        }
+    </script>
+</body>
+</html>
